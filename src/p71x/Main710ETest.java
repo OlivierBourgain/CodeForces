@@ -40,20 +40,21 @@ public class Main710ETest {
 	public void test4() {
 		String in = "64 1 2";
 		String out = "12";
-
+		assertEquals(out,run(in));
 	}
 	
 	@Test
 	public void test5() {
 		String in = "4528217 187553422 956731625";
 		String out = "21178755627";
-
+		assertEquals(out,run(in));
 	}
+	
 	@Test
 	public void test6() {
 		String in = "9999999 1 2";
 		String out = "54";
-
+		assertEquals(out,run(in));
 	}
 	
 	
