@@ -1,4 +1,4 @@
-package p82x;
+package p81x;
 
 import java.io.InputStream;
 import java.io.PrintStream;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  */
-public class Main820A {
+public class Main810A {
 	public static void main(String[] args) {
 		run(System.in, System.out);
 	}

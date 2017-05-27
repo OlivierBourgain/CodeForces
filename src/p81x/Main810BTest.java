@@ -1,4 +1,4 @@
-package p82x;
+package p81x;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,7 +10,7 @@ import java.io.PrintStream;
 import org.junit.Test;
 
 
-public class Main820BTest {
+public class Main810BTest {
 
 	@Test
 	public void test1() {
@@ -59,7 +59,7 @@ public class Main820BTest {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		PrintStream os = new PrintStream(baos);
 		
-		Main820B.run(is,os);
+		Main810B.run(is,os);
 		String res = baos.toString();
 		return res;
 	}
