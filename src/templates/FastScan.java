@@ -9,6 +9,16 @@ import java.util.StringTokenizer;
 /**
  */
 public class FastScan {
+
+	public static void run(FastScanner sc, PrintStream out) {
+		int n = sc.nextInt();
+		for (int i = 0; i < n; i++) {
+		}
+		out.print("");
+	}
+
+
+	
 	public static void main(String[] args) {
 		FastScanner in = new FastScanner(new BufferedReader(new InputStreamReader(System.in)));
 		run(in, System.out);
@@ -18,12 +28,7 @@ public class FastScan {
 		FastScanner in = new FastScanner(new BufferedReader(new InputStreamReader(is)));
 		run(in, out);
 	}
-	public static void run(FastScanner in, PrintStream out) {
-
-		int n = in.nextInt();
-		out.print(n*n);
-	}
-
+	
 	static class FastScanner {
 		BufferedReader in;
 		StringTokenizer st;
