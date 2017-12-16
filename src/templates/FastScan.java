@@ -10,10 +10,8 @@ import java.util.StringTokenizer;
  */
 public class FastScan {
 
-	public static void run(FastScanner sc, PrintStream out) {
-		int n = sc.nextInt();
-		for (int i = 0; i < n; i++) {
-		}
+	public static void run(FastScanner in, PrintStream out) {
+		int n = in.nextInt();
 		out.print("");
 	}
 

@@ -13,8 +13,8 @@ public class FastScanTest {
 
 	@Test
 	public void test1() {
-		String in = "9";
-		String out = "81";
+		String in = "";
+		String out = "";
 		assertEquals(out,run(in));
 	}
 	
