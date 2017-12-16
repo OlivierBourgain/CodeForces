@@ -1,4 +1,5 @@
-package templates;
+package p89x;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,18 +9,7 @@ import java.util.StringTokenizer;
 
 /**
  */
-public class FastScan {
-
-	public static void run(FastScanner in, PrintStream out) {
-		int n = in.nextInt();
-		for (int i = 0; i < n; i++) {
-			
-		}
-		out.print("");
-	}
-
-
-	
+public class Main898D {
 	public static void main(String[] args) {
 		FastScanner in = new FastScanner(new BufferedReader(new InputStreamReader(System.in)));
 		run(in, System.out);
@@ -29,7 +19,45 @@ public class FastScan {
 		FastScanner in = new FastScanner(new BufferedReader(new InputStreamReader(is)));
 		run(in, out);
 	}
-	
+
+	public static void run(FastScanner sc, PrintStream out) {
+
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		int k = sc.nextInt();
+
+		int[] a = new int[1000001];
+		for (int i = 0; i < n; i++) {
+			a[sc.nextInt()]++;
+		}
+
+		//dump(a);
+		int[] t = new int[1000001];
+		int res = 0;
+		for (int i = 1; i < t.length; i++) {
+
+			if (i >m) {
+				t[i] = max(0, t[i - 1] + a[i] - a[i - m]);
+			} else {
+				t[i] = max(0, t[i - 1] + a[i]);
+
+			}
+			
+			if (t[i] >= k) {
+				res += t[i] - k + 1;
+				a[i] -= t[i] - k + 1;
+				t[i] = k - 1;
+			}
+		}
+		//dump(t);
+
+		out.print(res);
+	}
+
+	private static int max(int i, int j) {
+		return i > j ? i : j;
+	}
+
 	static class FastScanner {
 		BufferedReader in;
 		StringTokenizer st;
